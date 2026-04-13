@@ -20,7 +20,7 @@ Routine service procedures and notes.
 Create one file per procedure as you write it up:
 
 - `blade-replacement.md` — how-to, torque, which screwdriver
-- `cutting-disc-bearing.md` — how to diagnose and replace
+- [`cutting-disc-bearing.md`](./cutting-disc-bearing.md) — how to diagnose and replace (wobbly disc, grinding)
 - `winter-storage.md` — checklist
 - `boundary-wire-repair.md` — splicing with gel connectors
 
