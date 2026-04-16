@@ -6,8 +6,8 @@ Add one file per part (e.g. `blades.md`, `cutting-disc-bearing.md`, `wheel-motor
 
 ## Common wear parts
 
-- **Blades** — 3× razor blades + screws. Replace as a set. Part no: TODO
-- **Cutting disc** — replace if bent/cracked. Part no: TODO
+- **[Blades](./blades.md)** — 3× razor blades + screws, replace as a set. OEM 9-pack: **577 86 46-03**
+- **Cutting disc assembly** — replace if bent/cracked or bearing worn. OEM: **585 29 69-02** (current), **585 29 69-01** (older). See [maintenance/cutting-disc-bearing.md](../maintenance/cutting-disc-bearing.md)
 - **Skid plate** — under cutting disc, protects housing
 - **Wheel motors** — front caster wheels, rear drive motors
 - **Drive wheel bearings** — suspected wear point, document symptoms here

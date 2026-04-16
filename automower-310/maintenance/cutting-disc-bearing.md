@@ -20,6 +20,29 @@ Before blaming the bearing, check cheaper causes:
 
 If the disc has play AND/OR spins roughly after cleaning → cutting disc bearing.
 
+## Try oil first (5 minutes, might buy a season)
+
+If the bearing is actually worn (pitted races), oil won't save it. But if it's just dry/dusty and still tight, a drop in the right spots can quiet it and delay the swap. Worth trying before you order.
+
+**Do this — flipped, mower off, safety key out:**
+
+1. **Blade pivot screws (3×)** — one drop of light machine oil on each pivot shoulder screw where the blade swings. Work each blade back and forth a few times. This is the #1 spot and often resolves chafing on its own.
+2. **Cutting disc hub seam** — thin bead of **penetrating oil** (e.g. WD-40 Specialist Penetrant — NOT regular WD-40) right at the seam where the disc shaft meets the housing. Spin the disc by hand so it migrates in.
+3. **Skid plate / underside screws** — only if something visibly rubs.
+
+**Do NOT oil:**
+
+- The blades themselves (oil + grass clippings = gunk).
+- The drive wheels / their rubber.
+- The charging contacts.
+- Inside the housing or onto electronics.
+
+**Rules of thumb:**
+
+- Use sparingly. Excess oil traps dust and grass, and you'll be back here in a week.
+- Prefer a light machine oil or penetrating oil with a precision straw. Avoid grease — too sticky, collects debris.
+- Run the mower on a small patch afterward and listen. If the noise is back within a day or two → it's the bearing; order the disc.
+
 ## Part
 
 Husqvarna sells this two ways:
@@ -27,7 +50,20 @@ Husqvarna sells this two ways:
 - **Cutting disc / blade disc assembly** (bearing pre-pressed into hub) — easy swap, no press needed. **Preferred.**
 - **Bearing only** — cheaper, but requires a press to fit into the hub.
 
-Part number: **TODO** — verify against serial number on husqvarna.com or at a dealer. Search terms: *"Husqvarna Automower 310 blade disc"* / *"cutting disc assembly"*.
+**OEM part numbers (Automower 310):**
+
+- **585 29 69-02** — current cutting disc assembly (preferred)
+- **585 29 69-01** — older revision (earlier 310 builds)
+- **531 17 74 01** — alternative OEM reference seen in some parts lists
+
+Verify against your serial number before ordering — the 310 had minor revisions across production years.
+
+**Where to order:**
+
+- Local authorized Husqvarna dealer — give them the serial, safest option
+- [husqvarna.com](https://www.husqvarna.com/) — official parts via the model's support page
+- [L&S Engineers (UK)](https://www.lsengineers.co.uk/cutting-disc-genuine-husqvarna-part-oem-no-585-29-69-02.html) — stocks OEM 585 29 69-02, ships to EU
+- [Wolfswinkel (NL)](https://www.wolfswinkel.shop/spare-parts-drawings/husqvarna/robotic-mowers/series-300/automower-310-mark-ii/automower-310-mark-ii) — parts diagrams for the 310 Mark II, useful for cross-referencing
 
 | Purchased | Supplier | Part no | Price | Notes |
 |-----------|----------|---------|-------|-------|
