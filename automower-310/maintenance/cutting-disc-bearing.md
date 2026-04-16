@@ -45,16 +45,18 @@ If the bearing is actually worn (pitted races), oil won't save it. But if it's j
 
 ## Part
 
-Husqvarna sells this two ways:
+Husqvarna sells this three ways:
 
-- **Cutting disc / blade disc assembly** (bearing pre-pressed into hub) — easy swap, no press needed. **Preferred.**
-- **Bearing only** — cheaper, but requires a press to fit into the hub.
+- **Cutting disc / blade disc assembly** (bearing pre-pressed into hub) — easy swap, no press needed. **Preferred** for most DIY jobs.
+- **Bearing set only** — ~1/3 the cost, but requires a press (or vise + sockets) to push the old bearing out and the new one in.
+- **Bundled repair kits** (third-party) — cover cutting spindle + front wheel axle bearings together. Front wheel bearings are also a common 4–5 season wear item on the 310, so this can make sense as a "do it all at once" job.
 
 **OEM part numbers (Automower 310):**
 
 - **585 29 69-02** — current cutting disc assembly (preferred)
 - **585 29 69-01** — older revision (earlier 310 builds)
 - **531 17 74 01** — alternative OEM reference seen in some parts lists
+- **588 42 17 02** — OEM bearing set for the brass disc (310 / 450X), bearing-only route
 
 Verify against your serial number before ordering — the 310 had minor revisions across production years.
 
@@ -62,8 +64,10 @@ Verify against your serial number before ordering — the 310 had minor revision
 
 - Local authorized Husqvarna dealer — give them the serial, safest option
 - [husqvarna.com](https://www.husqvarna.com/) — official parts via the model's support page
-- [L&S Engineers (UK)](https://www.lsengineers.co.uk/cutting-disc-genuine-husqvarna-part-oem-no-585-29-69-02.html) — stocks OEM 585 29 69-02, ships to EU
-- [Wolfswinkel (NL)](https://www.wolfswinkel.shop/spare-parts-drawings/husqvarna/robotic-mowers/series-300/automower-310-mark-ii/automower-310-mark-ii) — parts diagrams for the 310 Mark II, useful for cross-referencing
+- [L&S Engineers (UK)](https://www.lsengineers.co.uk/cutting-disc-genuine-husqvarna-part-oem-no-585-29-69-02.html) — stocks OEM disc 585 29 69-02, ships to EU
+- [Wolfswinkel (NL) — disc bearing set 588421702](https://www.wolfswinkel.shop/parts-automower-320-420-330x-430x/588421702/husqvarna-bearing-set-brass-disc-310-450x) — bearing-only route
+- [Wolfswinkel — 310 Mark II parts diagrams](https://www.wolfswinkel.shop/spare-parts-drawings/husqvarna/robotic-mowers/series-300/automower-310-mark-ii/automower-310-mark-ii) — useful for cross-referencing
+- [TIMBERA 14-pack bearing kit (Amazon)](https://amazon.com/TIMBERA-Bearings-Husqvarna-Automower-Spindle/dp/B09HXY4VR9) — cutting spindle + front wheel + axle bearings, third-party
 
 | Purchased | Supplier | Part no | Price | Notes |
 |-----------|----------|---------|-------|-------|
