@@ -62,12 +62,23 @@ Verify against your serial number before ordering — the 310 had minor revision
 
 **Where to order:**
 
+Full disc assembly (585 29 69-02 / 585296902):
+
 - Local authorized Husqvarna dealer — give them the serial, safest option
-- [husqvarna.com](https://www.husqvarna.com/) — official parts via the model's support page
-- [L&S Engineers (UK)](https://www.lsengineers.co.uk/cutting-disc-genuine-husqvarna-part-oem-no-585-29-69-02.html) — stocks OEM disc 585 29 69-02, ships to EU
-- [Wolfswinkel (NL) — disc bearing set 588421702](https://www.wolfswinkel.shop/parts-automower-320-420-330x-430x/588421702/husqvarna-bearing-set-brass-disc-310-450x) — bearing-only route
-- [Wolfswinkel — 310 Mark II parts diagrams](https://www.wolfswinkel.shop/spare-parts-drawings/husqvarna/robotic-mowers/series-300/automower-310-mark-ii/automower-310-mark-ii) — useful for cross-referencing
-- [TIMBERA 14-pack bearing kit (Amazon)](https://amazon.com/TIMBERA-Bearings-Husqvarna-Automower-Spindle/dp/B09HXY4VR9) — cutting spindle + front wheel + axle bearings, third-party
+- [Husqvarna.dk — reservedele til robotplæneklippere](https://www.husqvarna.com/dk/reservedele-og-tilbehor-til-robotplaeneklippere/) (DK, official)
+- [BilligeRobotknive.dk — skæreskive 310/315/315X](https://billigerobotknive.dk/shop/husqvarna-automower-skaereskive-310-315-315x/) (DK)
+- [Anker Bjerre — Automower 310 reservedele](https://www.ankerbjerre.dk/reservedele/husqvarna/robotplaeneklipper/automower-310) (DK)
+- [L&S Engineers — OEM 585 29 69-02](https://www.lsengineers.co.uk/cutting-disc-genuine-husqvarna-part-oem-no-585-29-69-02.html) (UK, ships EU)
+- [Wolfswinkel — Automower 310 current parts](https://www.wolfswinkel.shop/spare-parts-drawings/husqvarna/robotic-mowers/series-300/automower-310-current/automower-310) (NL)
+- [HusqvParts.com — 585296902](https://www.husqvparts.com/Husqvarna-585296902-Cutting-Disc-Am-315X-OEM/) (US, ~$24)
+
+Bearing set only (588 42 17 02, needs a press):
+
+- [Wolfswinkel — OEM bearing set 588421702](https://www.wolfswinkel.shop/parts-automower-320-420-330x-430x/588421702/husqvarna-bearing-set-brass-disc-310-450x)
+
+Bundled third-party kit (disc spindle + front wheel bearings):
+
+- [TIMBERA 14-pack bearing kit (Amazon)](https://amazon.com/TIMBERA-Bearings-Husqvarna-Automower-Spindle/dp/B09HXY4VR9)
 
 | Purchased | Supplier | Part no | Price | Notes |
 |-----------|----------|---------|-------|-------|
