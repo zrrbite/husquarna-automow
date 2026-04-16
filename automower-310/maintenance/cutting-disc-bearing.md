@@ -82,7 +82,7 @@ Bundled third-party kit (disc spindle + front wheel bearings):
 
 | Purchased | Supplier | Part no | Price | Notes |
 |-----------|----------|---------|-------|-------|
-|           |          |         |       |       |
+|           | [Anker Bjerre (DK)](https://www.ankerbjerre.dk/skov-og-have/robotplaeneklipper/tilbehoer-automower/knivdisk-1916) | HQ5852969-02 (= OEM 585 29 69-02) | 137 DKK | In stock, 1–3 day DK delivery. Verify 310 Mark II fit + bearing-included with supplier before ordering. |
 
 ## Tools
 
