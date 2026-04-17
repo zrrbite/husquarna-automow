@@ -15,20 +15,7 @@ from bleak import BleakScanner
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
 
-HUSQVARNA_KEYWORDS = {"automower", "husqvarna", "gardena"}
-
-# Husqvarna Group Bluetooth Company ID (little-endian in manufacturer data key)
-# 0x0426 = 1062 decimal — Husqvarna AB
-HUSQVARNA_COMPANY_ID = 0x0426
-
-
-def is_likely_automower(device: BLEDevice, adv: AdvertisementData) -> bool:
-    name = (device.name or "").lower()
-    if any(kw in name for kw in HUSQVARNA_KEYWORDS):
-        return True
-    if adv.manufacturer_data and HUSQVARNA_COMPANY_ID in adv.manufacturer_data:
-        return True
-    return False
+from common import handle_ble_error, is_likely_automower, save_device
 
 
 def format_manufacturer_data(mfr_data: dict[int, bytes]) -> str:
@@ -48,11 +35,15 @@ def format_service_uuids(uuids: list[str]) -> str:
 
 
 def on_detection(device: BLEDevice, adv: AdvertisementData, *, show_all: bool):
-    if not show_all and not is_likely_automower(device, adv):
+    automower = is_likely_automower(device, adv)
+    if not show_all and not automower:
         return
 
+    if automower:
+        save_device(device)
+
     ts = datetime.now().strftime("%H:%M:%S")
-    tag = " ** AUTOMOWER **" if is_likely_automower(device, adv) else ""
+    tag = " ** AUTOMOWER **" if automower else ""
     print(f"\n{'='*60}")
     print(f"[{ts}] {device.name or '(unknown)'} — {device.address}{tag}")
     print(f"  RSSI: {adv.rssi} dBm")
@@ -87,8 +78,4 @@ if __name__ == "__main__":
     try:
         asyncio.run(main(args.duration, args.all))
     except Exception as e:
-        if "bluetooth" in str(e).lower() or "adapter" in str(e).lower():
-            print(f"\nBluetooth error: {e}")
-            print("Check: is Bluetooth enabled in Windows Settings? Do you have a BT adapter?")
-        else:
-            raise
+        handle_ble_error(e)

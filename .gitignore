@@ -4,3 +4,7 @@ Thumbs.db
 *~
 .idea/
 .vscode/
+
+# BLE tools runtime files
+.last_device.json
+*.jsonl

@@ -1,14 +1,39 @@
 # BLE tools — Automower 310
 
-Python scripts (using [bleak](https://github.com/hbldh/bleak)) for sniffing and connecting to the Automower 310 over Bluetooth Low Energy.
+Python scripts (using [bleak](https://github.com/hbldh/bleak)) for sniffing and connecting to the Automower 310 over Bluetooth Low Energy. Cross-platform: Windows, Linux, macOS.
 
 ## Requirements
 
 ```
-pip install bleak
+pip install -r requirements.txt
 ```
 
-Needs a Bluetooth adapter. Most laptop adapters work; USB BT5.0 dongles also work.
+This installs `bleak`, which auto-pulls the right backend for your OS (WinRT on Windows, BlueZ/D-Bus on Linux, CoreBluetooth on macOS).
+
+### Platform setup
+
+**Windows**
+- Settings → Bluetooth & devices → toggle on.
+- Most laptop adapters work. For desktops without BT, a USB BT 5.0 dongle (e.g. TP-Link UB500) works.
+
+**Linux (BlueZ)**
+```bash
+# 1. Ensure bluetoothd is running
+sudo systemctl enable --now bluetooth
+
+# 2. Add yourself to the bluetooth group
+sudo usermod -aG bluetooth $USER
+# Log out and back in for the group change to take effect.
+
+# 3. Power on the adapter
+bluetoothctl power on
+```
+If you get D-Bus permission errors after the above, check that `/etc/dbus-1/system.d/bluetooth.conf` grants access to the `bluetooth` group. Fallback: run as root.
+
+**macOS**
+- System Settings → Bluetooth → toggle on.
+- When prompted, allow your terminal (Terminal.app, iTerm2, etc.) access in System Settings → Privacy & Security → Bluetooth.
+- **Important:** macOS does not expose real MAC addresses. Device addresses are system-generated UUIDs (e.g. `12345678-1234-...`). These are local to your Mac and won't match the address shown on Windows/Linux for the same device. The scripts handle this — just use auto-detect or copy the address from `scan.py` output.
 
 ## Scripts
 
@@ -20,15 +45,20 @@ python scan.py --duration 60  # scan longer
 python scan.py --all        # show ALL BLE devices (useful if mower isn't detected by name)
 ```
 
+When an Automower is found, its address is cached in `.last_device.json` so `connect.py` can reuse it.
+
 ### connect.py — enumerate GATT services
 
 ```bash
-python connect.py                              # auto-detect and connect
+python connect.py                              # auto-detect (uses cache, then scans)
 python connect.py --address AA:BB:CC:DD:EE:FF  # connect to known address
-python connect.py --address AA:BB:CC:DD:EE:FF --raw  # include raw hex dumps
+python connect.py --raw                        # include raw hex dumps
 ```
 
-May require pairing (PIN on mower display). If it fails, pair via Windows Bluetooth settings first, then retry.
+May require pairing (PIN on mower display). If it fails:
+- **Windows:** pair in Settings → Bluetooth.
+- **Linux:** `bluetoothctl pair <address>`
+- **macOS:** pair in System Settings → Bluetooth.
 
 ### monitor.py — long-running logger
 
@@ -45,3 +75,8 @@ Leave running while the mower roams. Each pass-by is logged as a JSON line with 
 1. Run `scan.py --all` first to verify your Bluetooth adapter works and to spot the mower's name/address.
 2. Note the address. Run `connect.py --address <addr> --raw` to dump all GATT data.
 3. Leave `monitor.py` running to build a log over time. Bring the JSONL back here for analysis.
+
+## Files (not committed)
+
+- `.last_device.json` — cached address of last-seen Automower (platform-specific)
+- `ble_log.jsonl` — monitor output log

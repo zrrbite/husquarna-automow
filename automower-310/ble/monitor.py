@@ -21,17 +21,7 @@ from bleak import BleakScanner
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
 
-HUSQVARNA_KEYWORDS = {"automower", "husqvarna", "gardena"}
-HUSQVARNA_COMPANY_ID = 0x0426
-
-
-def is_likely_automower(device: BLEDevice, adv: AdvertisementData) -> bool:
-    name = (device.name or "").lower()
-    if any(kw in name for kw in HUSQVARNA_KEYWORDS):
-        return True
-    if adv.manufacturer_data and HUSQVARNA_COMPANY_ID in adv.manufacturer_data:
-        return True
-    return False
+from common import handle_ble_error, is_likely_automower, save_device
 
 
 class Monitor:
@@ -45,6 +35,9 @@ class Monitor:
         automower = is_likely_automower(device, adv)
         if not self.show_all and not automower:
             return
+
+        if automower:
+            save_device(device)
 
         now = datetime.now(timezone.utc)
         entry = {
@@ -111,3 +104,5 @@ if __name__ == "__main__":
         asyncio.run(main(args.output, args.all))
     except KeyboardInterrupt:
         pass
+    except Exception as e:
+        handle_ble_error(e)
