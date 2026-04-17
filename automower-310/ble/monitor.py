@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Continuous BLE monitor — logs Automower advertisement data to a JSONL file
 each time the mower comes within range.

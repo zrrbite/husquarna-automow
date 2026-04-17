@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 BLE advertisement scanner — finds Husqvarna Automower devices nearby.
 

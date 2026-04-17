@@ -5,6 +5,10 @@ Thumbs.db
 .idea/
 .vscode/
 
+# Python
+.venv/
+__pycache__/
+
 # BLE tools runtime files
 .last_device.json
 *.jsonl

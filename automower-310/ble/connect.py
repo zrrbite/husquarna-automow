@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Connect to an Automower by BLE address and enumerate all GATT services,
 characteristics, and descriptors. Reads any readable characteristics and

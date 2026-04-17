@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Shared constants, detection logic, and platform helpers for BLE scripts."""
 
 import json

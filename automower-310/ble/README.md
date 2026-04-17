@@ -4,11 +4,14 @@ Python scripts (using [bleak](https://github.com/hbldh/bleak)) for sniffing and 
 
 ## Requirements
 
-```
+```bash
+python3 -m venv .venv
+source .venv/bin/activate   # macOS / Linux
+# .venv\Scripts\activate    # Windows
 pip install -r requirements.txt
 ```
 
-This installs `bleak`, which auto-pulls the right backend for your OS (WinRT on Windows, BlueZ/D-Bus on Linux, CoreBluetooth on macOS).
+This creates a virtual environment and installs `bleak`, which auto-pulls the right backend for your OS (WinRT on Windows, BlueZ/D-Bus on Linux, CoreBluetooth on macOS).
 
 ### Platform setup
 
